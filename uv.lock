@@ -2216,6 +2216,19 @@ wheels = [
 ]
 
 [[package]]
+name = "mystmd"
+version = "1.10.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "nodeenv" },
+    { name = "platformdirs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/18/6e/117ae46e81709d74f8ca8fc444511d6f11cad5a01555618dad0beb905d81/mystmd-1.10.1.tar.gz", hash = "sha256:40b24f20f3c6b77b5292aac4a1b2f89c1915848dd796bb9f2c1d2af71622fc99", size = 2981748, upload-time = "2026-06-05T17:07:02.098Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7a/16/b71308f641c431936964459df6cdd4b941f8f4a42e9b53f1c8b249cd27e9/mystmd-1.10.1-py3-none-any.whl", hash = "sha256:353bac72edea3dd9335efcf5ec72f95f40509a46026e248b75a96cd373398054", size = 3013401, upload-time = "2026-06-05T17:06:59.902Z" },
+]
+
+[[package]]
 name = "narwhals"
 version = "2.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2249,6 +2262,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/6a/51/63fe664f3908c97be9d2e4f1158eb633317598cfa6e1fc14af5383f17512/networkx-3.6.1.tar.gz", hash = "sha256:26b7c357accc0c8cde558ad486283728b65b6a95d85ee1cd66bafab4c8168509", size = 2517025, upload-time = "2025-12-08T17:02:39.908Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl", hash = "sha256:d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762", size = 2068504, upload-time = "2025-12-08T17:02:38.159Z" },
+]
+
+[[package]]
+name = "nodeenv"
+version = "1.9.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/43/16/fc88b08840de0e0a72a2f9d8c6bae36be573e475a6326ae854bcc549fc45/nodeenv-1.9.1.tar.gz", hash = "sha256:6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f", size = 47437, upload-time = "2024-06-04T18:44:11.171Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/1d/1b658dbd2b9fa9c4c9f32accbfc0205d532c8c6194dc0f2a4c0428e7128a/nodeenv-1.9.1-py2.py3-none-any.whl", hash = "sha256:ba11c9782d29c27c70ffbdda2d7415098754709be8a7056d79a737cd901155c9", size = 22314, upload-time = "2024-06-04T18:44:08.352Z" },
 ]
 
 [[package]]
@@ -2560,11 +2582,11 @@ wheels = [
 
 [[package]]
 name = "platformdirs"
-version = "4.9.2"
+version = "4.2.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/1b/04/fea538adf7dbbd6d186f551d595961e564a3b6715bdf276b477460858672/platformdirs-4.9.2.tar.gz", hash = "sha256:9a33809944b9db043ad67ca0db94b14bf452cc6aeaac46a88ea55b26e2e9d291", size = 28394, upload-time = "2026-02-16T03:56:10.574Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/52/0763d1d976d5c262df53ddda8d8d4719eedf9594d046f117c25a27261a19/platformdirs-4.2.2.tar.gz", hash = "sha256:38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3", size = 20916, upload-time = "2024-05-15T03:18:23.372Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/48/31/05e764397056194206169869b50cf2fee4dbbbc71b344705b9c0d878d4d8/platformdirs-4.9.2-py3-none-any.whl", hash = "sha256:9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd", size = 21168, upload-time = "2026-02-16T03:56:08.891Z" },
+    { url = "https://files.pythonhosted.org/packages/68/13/2aa1f0e1364feb2c9ef45302f387ac0bd81484e9c9a4c5688a322fbdfd08/platformdirs-4.2.2-py3-none-any.whl", hash = "sha256:2d7a1657e36a80ea911db832a8a6ece5ee53d8de21edd5cc5879af6530b1bfee", size = 18146, upload-time = "2024-05-15T03:18:21.209Z" },
 ]
 
 [[package]]
@@ -3486,6 +3508,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "mystmd" },
     { name = "pytest" },
 ]
 docs = [
@@ -3496,7 +3519,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "a2a-sdk", specifier = ">=0.3.23" },
+    { name = "a2a-sdk", specifier = ">=0.3.23,<1.0.0" },
     { name = "anthropic", specifier = ">=0.83.0" },
     { name = "claude-agent-sdk", specifier = ">=0.1.38" },
     { name = "inspect-ai", specifier = ">=0.3.179" },
@@ -3509,7 +3532,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=9.0.3" }]
+dev = [
+    { name = "mystmd", specifier = ">=1.10.1" },
+    { name = "pytest", specifier = ">=9.0.3" },
+]
 docs = [
     { name = "mkdocs", specifier = ">=1.6" },
     { name = "mkdocs-material", specifier = ">=9.5" },
