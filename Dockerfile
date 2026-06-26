@@ -12,21 +12,11 @@ RUN npm install -g @anthropic-ai/claude-code
 
 WORKDIR /app
 
-# Install only the runtime dependencies needed by the A2A server + starsim
-RUN pip install --no-cache-dir \
-    "a2a-sdk>=0.3.23" \
-    claude-agent-sdk \
-    click \
-    uvicorn \
-    typing_extensions \
-    fastmcp \
-    starsim
-
 # Copy only the A2A server source (no eval code, no problems/answers)
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 COPY README.md pyproject.toml ./
 COPY claude_a2a/ claude_a2a/
-RUN uv pip install --no-deps -e . --system
+RUN uv pip install -e . --system
 
 # Copy entrypoint script
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
