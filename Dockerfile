@@ -14,7 +14,7 @@ WORKDIR /app
 
 # Install only the runtime dependencies needed by the A2A server + starsim
 RUN pip install --no-cache-dir \
-    a2a-sdk \
+    "a2a-sdk>=0.3.23" \
     claude-agent-sdk \
     click \
     uvicorn \
